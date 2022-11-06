@@ -12,10 +12,16 @@ const App = () => {
 
 
       <div class="max-w-md mx-auto mt-10 space-y-5 flex gap-10 justify-center">
-        <Counter data={1} />
-        <Counter data={2} />
-        <Counter data={10} />
+        <Counter data={1} dec={2} />
+        <Counter data={2} dec={2} />
+        <Counter data={10} dec={2} />
       </div>
+      <button
+        className="bg-red-400 text-white px-3 py-2 rounded shadow"
+
+      >
+        Reset
+      </button>
     </div>
   );
 };

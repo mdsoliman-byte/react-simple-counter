@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-const Counter = ({ data }) => {
+const Counter = ({ data, dec }) => {
   const [count, setCount] = useState(0);
   const increment = () => {
     setCount((previous) => previous + data);
   };
   const decrement = () => {
-    if (count === 0) {
+    if (count <= 0) {
       setCount(0);
     } else {
-      setCount((previous) => previous - 1);
+      setCount((previous) => previous - dec);
     }
   };
 
