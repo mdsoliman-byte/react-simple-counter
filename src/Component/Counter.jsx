@@ -6,7 +6,11 @@ const Counter = ({ data }) => {
     setCount((previous) => previous + data);
   };
   const decrement = () => {
-    setCount((previous) => previous - 1);
+    if (count === 0) {
+      setCount(0);
+    } else {
+      setCount((previous) => previous - 1);
+    }
   };
 
   return (
